@@ -1,0 +1,137 @@
+<section class="container-fluid mainsec">
+    <!-- content starts -->
+    <div class="row">
+        <div id="carouselExampleIndicators" class="container stepCustomSlider carousel slide" data-ride="carousel"
+            style="overflow:hidden">
+            <ol class="carousel-indicators pageIndicators">
+                <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                <li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+            </ol>
+
+            <div class="carousel-inner">
+                <div class="row carousel-item active stepsToActivate">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="assets/images/banner-1.png" class="img-responsive stepImgDiv" />
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 captionBox">
+                        <div class="stepsCaption">
+                            <h2>Activate your 2 wheeler policy</h2>
+                            <p>in 4 easy steps</p>
+                        </div>
+                        <div class="mt-4 cstmBtnSteps">
+                            <button type="submit" class="cstmbtn getStartedBtn mr-4"
+                                data-target="#carouselExampleIndicators" data-slide-to="1">Get Started</button>
+                            <a href="page_02.html" class="link ml-4" [routerLink]="[ '/quote' ]">Skip</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row carousel-item stepsToActivate">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="assets/images/banner-1.png" class="img-responsive stepImgDiv" />
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 captionBox">
+                        <div class="stepsCaption">
+                            <h2>Step 1</h2>
+                            <p>Provide us with your vehicle details and check your IDV and NCB</p>
+                        </div>
+                        <div class="mt-4 cstmBtnSteps">
+                            <button type="submit" class="cstmbtn step-1-bg mr-4"
+                                data-target="#carouselExampleIndicators" data-slide-to="2"><i
+                                    class="icon-next-arrow"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row carousel-item stepsToActivate">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="assets/images/banner-1.png" class="img-responsive stepImgDiv" />
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 captionBox">
+                        <div class="stepsCaption">
+                            <h2>Step 2</h2>
+                            <p>Provide us with your personal details</p>
+                        </div>
+                        <div class="mt-4 cstmBtnSteps">
+                            <button type="submit" class="cstmbtn step-2-bg mr-4"
+                                data-target="#carouselExampleIndicators" data-slide-to="3"><i
+                                    class="icon-next-arrow"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row carousel-item stepsToActivate">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="assets/images/banner-1.png" class="img-responsive stepImgDiv" />
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 captionBox">
+                        <div class="stepsCaption">
+                            <h2>Step 3</h2>
+                            <p>Enter your ICICI Lombard policy key</p>
+                        </div>
+                        <div class="pageIndicators">
+                            <a class="active"></a><a></a><a></a><a></a><a></a>
+                        </div>
+                        <div class="mt-4 cstmBtnSteps">
+                            <button type="submit" class="cstmbtn step-3-bg mr-4"
+                                data-target="#carouselExampleIndicators" data-slide-to="4"><i
+                                    class="icon-next-arrow"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row carousel-item stepsToActivate">
+                    <div class="col-xl-6 col-lg-6 col-md-6">
+                        <img src="assets/images/banner-1.png" class="img-responsive stepImgDiv" />
+                    </div>
+                    <div class="col-xl-6 col-lg-6 col-md-6 captionBox">
+                        <div class="stepsCaption">
+                            <h2>Step 4</h2>
+                            <p>Enter your ICICI Lombard policy key</p>
+                        </div>
+                        <div class="pageIndicators">
+                            <a class="active"></a><a></a><a></a><a></a><a></a>
+                        </div>
+                        <div class="mt-4 cstmBtnSteps">
+                            <button type="submit" class="cstmbtn getStartedBtn mr-4" [routerLink]="[ '/quote' ]">Get
+                                Started</button>
+                        </div>
+                    </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div>
+</section> <!-- content ends -->
+
+<!-- <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <script src="assets/js/bootstrap-datepicker.min.js"></script> -->
+<script>
+    //datepicker 
+    $('.dob').datepicker({
+        format: "dd/mm/yyyy",
+        clearBtn: true,
+        autoclose: true,
+        todayHighlight: true,
+        toggleActive: true
+    });
+
+    //carousel
+    $('.carousel').carousel({
+        interval: false
+    })
+</script>

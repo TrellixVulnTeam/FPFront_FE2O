@@ -1,0 +1,14 @@
+.error_span {
+  color: #E71A1A;
+  font: 600 12px "Muli", sans-serif;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+  // opacity: 0;
+  background: transparent url(../../../assets/images/calendar.png) no-repeat 99% center !important;
+}
+
+label>input[type="radio"]+*::before {
+  width: 1.3rem !important;
+  height: 1.3rem !important;
+}

@@ -1,0 +1,36 @@
+<div class="row">
+    <div class="container uploadFileTemplate">
+        <div class="row" style="margin-top: 35px;">
+            <div class="col-sm-12">
+                <div class="tablediv">
+                    <div class="tableBadge">
+                        <i class="icon-records"></i>
+                        <span>Uploaded Records</span>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Batch ID</th>
+                                    <th>Total records</th>
+                                    <th>Records Processed</th>
+                                    <th>Records Failed</th>
+                                    <th>Status</th>
+                                    <th class="lastCol">Date</th>
+                                </tr>
+                                <tr *ngFor="let data of dashBoardData">
+                                    <td>{{ data[0] }}</td>
+                                    <td>{{ data[1] }}</td>
+                                    <td>{{ data[2] }}</td>
+                                    <td>{{ data[3] }}</td>
+                                    <td>{{ data[4] }}</td>
+                                    <td>{{ data[5] | date:'medium' }}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

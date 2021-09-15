@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>ICICI Lombard</title>
+  <!-- <base href="/"> -->
+  <script>
+    document.write('<base href="' + document.location + '" />');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="assets/images/logo.png">
+  <link rel="stylesheet" href="assets/scss/bootstrap-datepicker3.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Muli:300,400,600,700,800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/scss/bootstrap.min.css" />
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/bootstrap-datepicker.min.js"></script>
+  <script src="assets/js/popper.min.js"></script>
+  <script src="assets/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="assets/scss/style.css" />
+  <link rel="stylesheet" href="assets/scss/style.scss" />
+  <script>
+    //payment options popup
+    $("#showPopup").click(function () {
+      $("#slidingContent").slideToggle("slow");
+      if ($(this).hasClass('hide')) {
+        document.getElementById("overlay").style.display = "none";
+        $('#pay-now-popup').animate({ bottom: '0px' }, 'slow');
+        $(this).removeClass('hide').addClass('show');
+
+      } else {
+        document.getElementById("overlay").style.display = "block";
+        $('#pay-now-popup').animate({ bottom: '0px' }, 'slow');
+        $(this).removeClass('show').addClass('hide');
+
+      }
+    });
+
+    $("#overlay").click(function () {
+      $("body").find("#slidingContent").removeClass("show");
+    });
+
+    $(document).ready(function () {
+      $("#nomineeDetails_01").click(function () {
+        $("#slidingNomDetails").slideToggle("slow");
+      });
+    });
+
+    //datepicker in wizard form
+    $(document).ready(function () {
+      $('.dob').datepicker({
+        format: "dd/mm/yyyy",
+        clearBtn: true,
+        autoclose: true,
+        todayHighlight: true,
+        toggleActive: true
+      });
+      $('.dob').on("change", function () {
+        format: 'YYYY-MM-DD'
+        // alert($(this).val())
+        return $(this).val();
+      });
+    });
+  </script>
+</head>
+
+<body style="padding-top: 70px;">
+  
+  <app-root></app-root>
+
+</body>
+
+<script>
+  document.onkeypress = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+      return false;
+    } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+      return false;
+    }
+  }
+  document.onmousedown = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+      return false;
+    } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+      return false;
+    }
+  }
+  document.onkeydown = function (event) {
+    event = (event || window.event);
+    if (event.keyCode == 123) {
+      return false;
+    } else if ((event.ctrlKey && event.shiftKey && event.keyCode == 73) || (event.ctrlKey && event.shiftKey && event.keyCode == 74)) {
+      return false;
+    }
+  }
+
+  $(document).on({
+    "contextmenu": function (e) {
+      // console.log("ctx menu button:", e.which);
+
+      // Stop the context menu
+      e.preventDefault();
+    },
+    "mousedown": function (e) {
+     // console.log("normal mouse down:", e.which);
+    },
+    "mouseup": function (e) {
+     // console.log("normal mouse up:", e.which);
+    }
+  });
+</script>
+</html>

@@ -1,0 +1,44 @@
+<div class="row">
+  <div class="container uploadFileTemplate">
+    <div class="row loginDiv" style="padding-top: 50px;">
+      <div class="col-xl-8 col-lg-6 col-md-6"></div>
+      <div class="col-xl-4 col-lg-6 col-md-6" style="padding-left: 14%;"><a
+          style="cursor: pointer; margin-top: 0px !important; margin-right: 0px !important; color: #b02a30;"
+          class="downloadSampleTemp mt-4 mr-3" (click)="redirectToDash()">File upload dashboard<i
+            class="icon-download-btn"></i> </a></div>
+    </div>
+    <div class="row">
+      <div class="col-xl-8 col-lg-6 col-md-6">
+        <img src="./assets/images/illustrated-bg.png" class="img-responsive upload-img-responsive" />
+      </div>
+      <div class="col-xl-4 col-lg-6 col-md-6">
+        <div class="loginDiv">
+          <div class="form-group">
+            <label class="custom-label">Upload File</label>
+            <div class="custom-file mt-3 mb-3">
+              <!-- <input type="file" id="myfile" name="myfile"> -->
+              <input type="file" class="custom-file-input" id="customFileInput" aria-describedby="customFileInput"
+                (change)="onChange($event)"
+                accept="application/vnd.ms-excel, application/vnd.openxmlformats-officedocument.spreadsheetml.sheet">
+              <label class="custom-file-label" for="customFileInput">{{file.name}}</label>
+              <a style="cursor: pointer;" class="downloadSampleTemp mt-4 mr-3" (click)="downloadSample()">Download
+                Sample Report<i class="icon-download-btn"></i> </a>
+              <button type="button" class="cstmbtn uploadBtn mt-4" (click)="uploadDoc()" *ngIf="validFile">Upload </button>
+              <a style="color: red;" class="downloadSampleTemp mt-4 mr-3"
+                *ngIf="fileSelect && !validFile">Invalid file format.</a>
+              <a style="color: red;" class="downloadSampleTemp mt-4 mr-3"
+                *ngIf="fileUploadSuccess && isUploadClick">File
+                successfully uploaded. Click on file upload dashbord to check status.</a>
+              <a style="color: red;" class="downloadSampleTemp mt-4 mr-3"
+                *ngIf="!fileUploadSuccess && isUploadClick && !fileUploadRes">Failed to
+                upload file.</a>
+                <a style="color: red;" class="downloadSampleTemp mt-4 mr-3"
+                *ngIf="!fileUploadSuccess && isUploadClick && fileUploadRes">Failed to
+                upload file. {{fileUploadRes.message}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
